@@ -32,9 +32,14 @@ description: "Talks zu Shift-Left, Testen und Software-Qualität – für besser
         <div class="talk-item-body">
           <div class="talk-item-title">
             <a href="{{ '/talks/' | relative_url }}#{{ talk.id }}">{{ talk.title }}</a>
-            <span class="badge-upcoming">Demnächst</span>
           </div>
-          <div class="talk-item-meta">{{ date_entry.event }} · {{ date_entry.location }}</div>
+          <div class="talk-item-meta">
+          {% if date_entry.url %}
+            🔗<a href="{{ date_entry.url }}" target="_blank" rel="noopener noreferrer">{{ date_entry.event }}</a> · {{ date_entry.location }}
+          {% else %}
+            {{ date_entry.event }} · {{ date_entry.location }}
+          {% endif %}
+          </div>
         </div>
       </li>
         {% endif %}

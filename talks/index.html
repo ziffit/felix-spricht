@@ -9,9 +9,18 @@ description: "Alle Vorträge von Felix – mit Abstract und Folien-Download."
   <header class="page-header">
     <h1>Talks</h1>
     <p>Alle Talks mit Abstract, Folien und weiteren Ressourcen. Kommt auf mich zu, wenn Ihr Fragen habt oder einen Terminvorschlag habt.</p>
+
+    {% assign talks = site.data.talks %}
+    {% if talks.size > 0 %}
+      <ul role="list" class="talks-index">
+      {% for talk in talks %}
+        <li>#<a href="#{{ talk.id }}">{{ talk.title }}</a></li>
+      {% endfor %}
+      </ul>      
+    {% endif %}
   </header>
 
-  {% assign talks = site.data.talks | sort: "title" %}
+  {% assign talks = site.data.talks %}
   {% if talks.size > 0 %}
   <section aria-labelledby="talks-heading">
     {% for talk in talks %}

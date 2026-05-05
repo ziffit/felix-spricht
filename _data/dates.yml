@@ -1,3 +1,26 @@
+- id: kill-your-tests
+  date: 2026-10-27
+  time: "18:15-19:30"
+  event: "JUG Switzerland - Zürich"
+  location: "Zürich (CH) - PH Zürich,"
+  url: "https://www.jug.ch/html/events/2026/kill-your-tests_zh.html"
+  status: upcoming
+
+- id: kill-your-tests
+  date: 2026-10-28
+  time: "18:00-19:15"
+  event: "JUG Switzerland - BERN"
+  location: "Bern (CH) - vatter Business Center"
+  url: "https://www.jug.ch/html/events/2026/kill-your-tests_be.html"
+  status: upcoming
+
+- id: kill-your-tests
+  date: 2026-10-29
+  time: "18:00-19:15"
+  event: "JUG Switzerland - ST GALLEN"
+  location: "St. Gallen (CH) - OST - Ostschweizer Fachhochschule"
+  url: "https://www.jug.ch/html/events/2026/kill-your-tests_sg.html"
+  status: upcoming
 
 - id: exploratives-testen
   date: 2026-04-23
@@ -18,7 +41,6 @@
   location: "Nürnberg - BRANDAD"
   status: past
 
-
 - id: life-lessons
   date: 2025-05-21
   event: "INVisionDay 2025"
@@ -29,6 +51,12 @@
   date: 2025-04-01
   event: "Javaland 2025"
   location: "Nürburg - Nürburgring"
+  status: past
+
+- id: shift-left-doc
+  date: 2025-03-20
+  event: "JUG Darmstadt"
+  location: "Darmstadt"
   status: past
 
 - id: shift-left-doc

@@ -1,3 +1,35 @@
+- id: kill-your-tests
+  title: "Kill your Tests"
+  description: "Wie wir den E2E-Sumpf mit KI-Agenten endlich trockenlegen"
+  abstract: |
+    Wir kennen es: Die E2E-Testsuite wächst schneller als der eigentliche Feature-Code. 
+    Was als gute Absicht begann, endet in einer unübersichtlichen Sammlung von Copy-Paste-Wüsten, 
+    die ewig laufen und am Ende doch nur Zufallsergebnisse in einer chronisch roten Pipeline liefern.
+
+    Das Schlimmste? Keiner fühlt sich für diesen Test-Sumpf zuständig. 
+    Die Entwickler schieben es auf die Tester, die Tester warten auf stabile Testdaten, 
+    und am Ende hängen wir in endlosen Feedback-Schleifen fest. Wir verwalten den Verfall, anstatt Qualität zu liefern.
+
+    Die Lösung ist radikal wie genial: Wir hören auf, Testcode zu schreiben.
+
+    Alle Testfälle werden in schlichtem Markup geschrieben. 
+    Die KI übernimmt die Generierung des eigentlichen Playwright-Codes. 
+    Kann der Test nicht erzeugt werden oder tut er nicht, was er soll? Dann war der Input ungenügend. 
+    Statt den Code mühsam zu flicken oder zu debuggen, löschen wir ihn einfach. Wir passen unsere Testbeschreibung 
+    im Markup an und lassen die KI einen neuen Test erstellen.
+
+    Die Wegwerfmentalität garantiert, dass die fachliche Beschreibung präzise ist – denn wenn die KI sie versteht, 
+    dann auch ein Mensch. Code-Drift wird ausgeschlossen, die fachliche Beschreibung und der Test passen sicher zusammen. 
+    Die Sammlung aller Testbeschreibungen im Repository macht die KI zum Testmanager: Welchen Test muss ich erweitern, 
+    um Feature X abzudecken?
+
+    Tests werden technologieunabhängig und für Nicht-Techies lesbar. Wer braucht noch teure, proprietäre Enterprise-Suiten, 
+    wenn man mit Open Source und smarten Agenten schneller, billiger und stabiler ans Ziel kommt? 
+    In diesem Talk schauen wir uns mit viel Praxis an, wie wir diesen Workflow etablieren und warum wir Browsertests komplett 
+    neu denken müssen. Für mehr Shift-Left und mehr Qualität.
+
+  tags: [Shift-Left, Softwarequalität, KI, Testautomatisierung]
+
 - id: exploratives-testen
   title: "Exploratives Testen – selbstorganisierte Sessions für Entwickler:innen"
   description: "Wie Teams exploratives Testen mit Test-Chartas einführen und sofort besseres Feedback erhalten."

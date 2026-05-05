@@ -243,6 +243,11 @@ a:hover { color: var(--color-accent-hover); }
 }
 
 /* ----- Talk Detail (Vorträge-Seite) ----- */
+
+.talks-index li {
+  list-style-type: none;
+}
+
 .talk-detail {
   padding: 2rem 0;
   border-bottom: 1px solid var(--color-border);
