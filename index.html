@@ -1,0 +1,71 @@
+---
+layout: default
+title: "Felix Spricht – IT-Talks"
+description: "Talks zu Shift-Left, Testen und Software-Qualität – für bessere Code-Qualität."
+---
+
+<div class="container">
+
+  <!-- Intro -->
+  <section class="intro" aria-label="Über Felix">
+    <img src="{{ '/assets/images/FelixTensingKleiner.png' | relative_url }}" alt="Felix" class="intro-avatar">
+    <div>
+      <div class="intro-name">Felix Spricht</div>
+      <div class="intro-tagline">Shift-Left · Testen · Software-Qualität</div>
+    </div>
+  </section>
+
+  <!-- Kommende Vorträge -->
+  {% assign upcoming = site.data.dates | where: "status", "upcoming" | sort: "date" %}
+  {% if upcoming.size > 0 %}
+  <section class="talks-section" aria-labelledby="upcoming-heading">
+    <h2 class="section-title" id="upcoming-heading">Kommende Termine</h2>
+    <ul class="talk-list" role="list">
+      {% for date_entry in upcoming %}
+        {% assign talk = site.data.talks | where: "id", date_entry.id | first %}
+        {% if talk %}
+      <li class="talk-item">
+        <div class="talk-item-date-container">
+          <span class="talk-item-date">{{ date_entry.date | date: "%d.%m.%Y" }}</span>
+          {% if date_entry.time %}<span class="talk-item-time">{{ date_entry.time }}</span>{% endif %}
+        </div>
+        <div class="talk-item-body">
+          <div class="talk-item-title">
+            <a href="{{ '/talks/' | relative_url }}#{{ talk.id }}">{{ talk.title }}</a>
+            <span class="badge-upcoming">Demnächst</span>
+          </div>
+          <div class="talk-item-meta">{{ date_entry.event }} · {{ date_entry.location }}</div>
+        </div>
+      </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <!-- Vergangene Vorträge -->
+  {% assign past = site.data.dates | where: "status", "past" | sort: "date" | reverse %}
+  <section class="talks-section" aria-labelledby="past-heading">
+    <h2 class="section-title" id="past-heading">Vergangene Vorträge</h2>
+    <ul class="talk-list" role="list">
+      {% for date_entry in past %}
+        {% assign talk = site.data.talks | where: "id", date_entry.id | first %}
+        {% if talk %}
+      <li class="talk-item">
+        <div class="talk-item-date-container">
+          <span class="talk-item-date">{{ date_entry.date | date: "%d.%m.%Y" }}</span>
+          {% if date_entry.time %}<span class="talk-item-time">{{ date_entry.time }}</span>{% endif %}
+        </div>
+        <div class="talk-item-body">
+          <div class="talk-item-title">
+            <a href="{{ '/talks/' | relative_url }}#{{ talk.id }}">{{ talk.title }}</a>
+          </div>
+          <div class="talk-item-meta">{{ date_entry.event }} · {{ date_entry.location }}</div>
+        </div>
+      </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+</div>

@@ -1,0 +1,18 @@
+title: Felix Spricht
+description: IT-Talks & Präsentationen – Kubernetes, DevOps, Cloud und mehr.
+url: "https://ziffit.github.io"
+baseurl: "/felix-spricht"
+
+author:
+  name: Felix Tensing
+  bio: "IT-Speaker zu Themen wie Kubernetes, DevOps und Cloud-Architekturen."
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/

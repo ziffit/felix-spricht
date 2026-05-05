@@ -1,0 +1,84 @@
+- id: exploratives-testen
+  title: "Exploratives Testen – selbstorganisierte Sessions für Entwickler:innen"
+  description: "Wie Teams exploratives Testen mit Test-Chartas einführen und sofort besseres Feedback erhalten."
+  abstract: |
+    Frühes Testen in der Softwareentwicklung gilt längst als bewährte Praxis – dennoch verlassen
+    sich viele Entwickler:innen weiterhin auf „den Tester“, um ihre Arbeit zu prüfen. Entwicklung
+    und Test laufen getrennt, Feedbackschleifen verlängern sich und es entstehen Wissenssilos.
+
+    Exploratives Testen bietet hier eine einfache und wirkungsvolle Lösung. In selbstorganisierten
+    Sessions können Teams ohne Vorwissen unmittelbar starten. Test-Chartas geben Orientierung,
+    ohne die kreative Erkundung einzuschränken. Schon kurze, fokussierte Sessions liefern
+    wertvolles Feedback, decken blinde Flecken auf und fördern den Wissensaustausch im Team.
+    So profitiert das ganze Team vom Knowledge-Aufbau – sei es fachliches Wissen, Testmethoden
+    oder Aspekte wie Barrierefreiheit.
+
+    Der Vortrag zeigt praxisnah, wie Entwickler:innen exploratives Testen bottom-up einführen
+    können – auch ohne offizielles „Go“ von oben. Anhand von Beispielen, konkreten Anleitungen
+    und leicht übertragbaren Formaten erhalten Teilnehmende einen Hands-on-Einstieg, mit dem
+    sie sofort beginnen und profitieren können. Exploratives Testen zeigt sofort Wirkung –
+    wenn ihr es einfach ausprobiert.
+
+    **Lernziele**: Die Teilnehmenden verstehen, wie exploratives Testen funktioniert und warum es auch für Entwickler:innen wertvoll ist.
+    Sie lernen, selbstorganisierte Test-Sessions mit Test-Chartas zu planen und durchzuführen – ohne Vorwissen oder offizielles „Go“.
+    Sie erkennen, wie Teams durch Bottom-up-Ansätze direkt profitieren: schnelleres Feedback, weniger Wissenssilos und höhere Qualität.
+    
+    **Vorkenntnisse**: Für diesen Vortrag sind keine speziellen Vorkenntnisse erforderlich – einzig Offenheit für das Thema ist hilfreich. Das Zielpublikum sind Entwickler:innen, die sich wenig bis gar nicht mit explorativem Testen beschäftigt haben, aber daran interessiert sind, ihre Testkompetenz zu erweitern und praxisnah zu lernen, wie sie selbstorganisierte Testsessions im Team einführen und direkt profitieren können.
+
+  files:
+      - label: "Folien"
+        file: "Explorative Testsessions - Felix Tensing.pdf"
+      - label: "Testcharta (Beispiel)"
+        file: "TestchartaTemplate - Felix Tensing.pdf"
+  tags: [Exploratives Testen, Shift-Left, Softwarequalität]
+
+- id: life-lessons
+  title: "Life Lessons – Prinzipien, die mich prägen und die ich gerne früher gekannt hätte"
+  description: "Persönliche Erfahrungen und Prinzipien für bessere Entscheidungen und stärkere Zusammenarbeit in der IT."
+  abstract: |
+    In unserer beruflichen Entwicklung stehen wir oft vor einer Vielzahl von Entscheidungen,
+    sei es im Großen oder im Kleinen. Doch wie trifft man kluge Entscheidungen, ohne jeden
+    Fehler selbst machen zu müssen? In diesem persönlichen und unterhaltsamen Vortrag teile
+    ich die wichtigsten Prinzipien und Erfahrungen, die ich in über 20 Jahren in der IT entdeckt
+    habe – damit Ihr davon profitieren könnt.
+
+    Wir sprechen unter anderem über Fehler, horizontale Kommunikation, den Sinn vor Kollegen zu
+    „hüpfen" und warum es manchmal wichtig ist, einem CEO zu widersprechen. Auch wenn nicht
+    jede Erkenntnis für jeden direkt umsetzbar ist, sollen diese Lektionen dazu anregen, eigene
+    Überzeugungen und Strategien zu entwickeln.
+  files:
+  - label: "Folien"
+    file: "LifeLessons - Felix Tensing.pdf"
+  tags: [Life Lessons, Entscheidungen, Kommunikation, Karriere]
+
+- id: shift-left-doc
+  title: "Shift-Left mit System: Fachliche Dokumentation mit Tests verbinden"
+  description: "Ein Konzept für dokumentationsgetriebene Tests und klare Nachvollziehbarkeit fachlicher Anforderungen."
+  abstract: |
+    "Feature oder Bug?" Diese Frage taucht auf, sobald ein Projekt komplexer ist und man nicht
+    mehr jede Ecke kennt. Die Antwort auf die Frage sucht man in der fachlichen Dokumentation.
+    Doch was, wenn diese unvollständig, veraltet, fehlerhaft oder – im schlimmsten Fall – gar
+    nicht vorhanden ist? Alternativ kommt der Blick in die Tests, die das System beschreiben.
+    Doch decken diese wirklich die fachlichen Anforderungen ab?
+
+    Der Vortrag stellt ein Konzept vor, bei dem Dokumentation und zugehörige Tests als Teil des
+    Codes gepflegt und über eindeutige Identifier verknüpft werden. Ein generierter Report stellt
+    die Abdeckung der Anforderungen dar und zeigt die Verbindung der beiden Teile. Im Fokus steht
+    dabei ein einfacher und effizienter Prozess.
+
+    Mit den gewonnenen Erkenntnissen und dem praktischen Beispiel könnt ihr eure Projekte
+    qualitativ hochwertig und nachhaltiger entwickeln. Die enge Verknüpfung von Fachlichkeit, Code
+    und Tests schafft die Grundlage für frühzeitiges und kontinuierliches Testen – kurz gesagt:
+    dem Shift-Left.
+
+    **Lernziele**: Verstehen des Zusammenhangs und der Vorteile einer strukturierten Dokumentation in Verbindung mit fachlichen Tests.
+
+    **Vorkenntnisse**: Ein grundlegendes Verständnis für Documentation as Code und Shift-Left hilft, ist aber nicht wirklich nötig.
+
+  files:
+      - label: "Folien"
+        file: "Shift-Left mit System - Felix Tensing.pdf"
+      - label: "Artikel Java-Aktuell 03/25"
+        file: "04-2025-Java aktuell-Shift-Left mit System.pdf"
+  tags: [Shift-Left, Softwarequalität, TDD, Documentation as Code]
+

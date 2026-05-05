@@ -1,0 +1,476 @@
+---
+---
+/* ===========================
+   Felix Spricht – Stylesheet
+   =========================== */
+
+/* ----- Variables ----- */
+:root {
+  --color-bg:           #f2e8d5;
+  --color-surface:      #fdf6ec;
+  --color-primary:      #4d7f8e;
+  --color-accent:       #c94e2e;
+  --color-accent-hover: #a83d22;
+  --color-upcoming:     #e8821e;
+  --color-text:         #222830;
+  --color-muted:        #5a6a72;
+  --color-border:       #ddd0b8;
+  --color-tag-bg:       #e0eff3;
+  --color-tag-text:     #1e5564;
+  --radius:             0.375rem;
+  --font-sans:          system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ----- Reset ----- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+a { color: var(--color-accent); text-decoration: underline; }
+a:hover { color: var(--color-accent-hover); }
+
+/* ----- Skip link (Barrierefreiheit) ----- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-text);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  z-index: 200;
+  text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ----- Layout ----- */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.main-content { padding: 2.5rem 0 5rem; }
+
+/* ----- Header ----- */
+.site-header {
+  background: var(--color-primary);
+  padding: 0.875rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid rgba(0,0,0,.15);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.site-title:hover { opacity: 0.88; color: #fff; text-decoration: none; }
+.site-title-spricht { color: var(--color-upcoming); }
+
+.site-nav { display: flex; gap: 0; }
+.site-nav a {
+  color: rgba(255,255,255,0.8);
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.site-nav a:hover { color: #fff; text-decoration: none; border-bottom-color: rgba(255,255,255,.4); }
+.site-nav a[aria-current="page"] { color: #fff; border-bottom-color: var(--color-upcoming); }
+
+/* ----- Footer ----- */
+.site-footer {
+  background: var(--color-primary);
+  color: rgba(255,255,255,.95);
+  text-align: center;
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
+.site-footer a { color: rgba(255,255,255,.95); }
+
+/* ----- Intro (Startseite) ----- */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2.5rem;
+}
+
+.intro-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--color-primary);
+  background: var(--color-surface);
+}
+
+.intro-avatar-placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px dashed var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.intro-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.intro-tagline {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-top: 0.2rem;
+}
+
+/* ----- Sections ----- */
+.talks-section { margin-bottom: 3rem; }
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+/* ----- Talk List (minimal) ----- */
+.talk-list {
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.talk-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: baseline;
+}
+
+.talk-item-date {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.05rem;
+}
+
+.talk-item-date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.talk-item-time {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.talk-item-body { min-width: 0; }
+
+.talk-item-title {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+.talk-item-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.talk-item-title a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.talk-item-meta {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-top: 0.15rem;
+}
+
+.badge-upcoming {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--color-upcoming);
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+  border-radius: 99px;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+/* ----- Talk Detail (Vorträge-Seite) ----- */
+.talk-detail {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.talk-detail p {
+  padding: 0 0 1rem 0;
+}
+.talk-detail:first-of-type { padding-top: 0; }
+
+.talk-detail-header { margin-bottom: 1rem; }
+
+.talk-detail-date {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-bottom: 0.3rem;
+}
+
+.talk-detail-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.talk-detail-event {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
+.talk-detail-abstract {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.talk-detail-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* ----- Tags ----- */
+.talk-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tag {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 99px;
+  border: 1px solid #b0d4df;
+}
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .15s;
+  border: none;
+}
+.btn:hover { text-decoration: none; }
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--color-accent-hover); color: #fff; }
+
+.btn-download {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.85rem;
+}
+.btn-download:hover { background: #3a6472; color: #fff; }
+
+/* Focus styles (Barrierefreiheit) */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ----- Page header ----- */
+.page-header {
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.page-header p {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-top: 0.4rem;
+}
+
+/* ----- Bio-Seite ----- */
+.bio-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.bio-image-placeholder {
+  aspect-ratio: 4/3;
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.bio-image-item {
+  text-align: center;
+}
+
+.bio-image-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.bio-image-caption {
+  margin-top: 0.65rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.bio-image {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(0, 0, 0, 0.86);
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  color: var(--color-text);
+  background: rgba(255,255,255,0.95);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  z-index: 1210;
+}
+
+.bio-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 3rem 0;
+  max-width: 640px;
+}
+
+.bio-text p + p { margin-top: 1rem; }
+
+.nobr { white-space: nowrap; }
+
+/* ----- Responsive ----- */
+@media (max-width: 640px) {
+  .talk-item {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+  .talk-item-date { font-size: 0.75rem; }
+  .bio-content { grid-template-columns: 1fr 1fr; }
+  .site-nav a { margin-left: 1rem; font-size: 0.875rem; }
+}
+
+@media (max-width: 400px) {
+  .bio-content { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,38 @@
+
+- id: exploratives-testen
+  date: 2026-04-23
+  event: "LE Software Craft Community"
+  location: "Leipzig - Codecentric AG"
+  status: past
+
+- id: exploratives-testen
+  date: 2026-03-10
+  time: "11:00 - 11:40"
+  event: "Javaland 2026"
+  location: "Rust - Europapark"
+  status: past
+
+- id: exploratives-testen
+  date: 2026-02-12
+  event: "JUG Nürnberg"
+  location: "Nürnberg - BRANDAD"
+  status: past
+
+
+- id: life-lessons
+  date: 2025-05-21
+  event: "INVisionDay 2025"
+  location: "Georg Simon Ohm Hochschule - Nürnberg"
+  status: past
+
+- id: shift-left-doc
+  date: 2025-04-01
+  event: "Javaland 2025"
+  location: "Nürburg - Nürburgring"
+  status: past
+
+- id: shift-left-doc
+  date: 2025-02-27
+  event: "JUG Nürnberg"
+  location: "Nürburg"
+  status: past

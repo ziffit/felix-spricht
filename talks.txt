@@ -1,0 +1,2 @@
+# Talks migrated to _data/talks.yml and _data/dates.yml
+

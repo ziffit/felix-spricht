@@ -1,0 +1,12 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-title" aria-label="{{ site.title }} – Startseite">
+      <span class="site-title-name">Felix</span><span class="site-title-spricht">Spricht</span>
+    </a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Termine</a>
+      <a href="{{ '/talks/' | relative_url }}" {% if page.url contains '/talks' %}aria-current="page"{% endif %}>Talks</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>Ich</a>
+    </nav>
+  </div>
+</header>
