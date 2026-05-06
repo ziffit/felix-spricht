@@ -1,7 +1,7 @@
 title: Felix Spricht
 description: IT-Talks & Präsentationen – Kubernetes, DevOps, Cloud und mehr.
-url: "https://ziffit.github.io"
-baseurl: "/felix-spricht"
+url: "https://felix-spricht.de"
+baseurl: ""
 
 author:
   name: Felix Tensing
