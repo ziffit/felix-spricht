@@ -23,6 +23,13 @@
   status: upcoming
 
 - id: exploratives-testen
+  date: 2026-11-11
+  event: "Software-QS-Tag 2026"
+  location: "Frankfurt am Main - Steigenberger Airport Hotel"
+  url: "https://www.qs-tag.de/"
+  status: upcoming
+
+- id: exploratives-testen
   date: 2026-04-23
   event: "LE Software Craft Community"
   location: "Leipzig - Codecentric AG"
