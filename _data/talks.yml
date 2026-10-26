@@ -28,6 +28,9 @@
     In diesem Talk schauen wir uns mit viel Praxis an, wie wir diesen Workflow etablieren und warum wir Browsertests komplett 
     neu denken müssen. Für mehr Shift-Left und mehr Qualität.
 
+  links:
+    - label: "GitHub Repository"
+      url: "https://github.com/ziffit/killyourtests"
   tags: [Shift-Left, Softwarequalität, KI, Testautomatisierung]
 
 - id: exploratives-testen

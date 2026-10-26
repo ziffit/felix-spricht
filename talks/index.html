@@ -47,6 +47,15 @@ description: "Alle Vorträge von Felix – mit Abstract und Folien-Download."
         </a>
           {% endfor %}
         {% endif %}
+        {% if talk.links %}
+          {% for link in talk.links %}
+        <a href="{{ link.url }}" class="btn btn-download"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="{{ link.label }}: {{ talk.title }}">
+          ↗ {{ link.label }}
+        </a>
+          {% endfor %}
+        {% endif %}
       </footer>
     </article>
     {% endfor %}
